@@ -1,0 +1,16 @@
+{
+  "name": "node_shiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.10.13",
+    "nodemon": "^2.0.6"
+  }
+}
