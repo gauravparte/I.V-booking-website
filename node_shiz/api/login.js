@@ -13,9 +13,11 @@ route.post('/', (req,res, next) => {
         let userModel = User(user);
         userModel.save().then(res.json({ message: "logged in succesfully!", user})).catch(error  => {
             res.json({error})
-        })
+        });
+        next();
+        console.log(`${user.firstName} logged in.`);
     })
 
-})
+});
 
 module.exports = route;

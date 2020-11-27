@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9e5da14-6dd8-43a5-9240-9340c2e7adc1" name="Default Changelist" comment="" />
+    <list default="true" id="e9e5da14-6dd8-43a5-9240-9340c2e7adc1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/I.V-booking-website.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1k0Iy3HGBCh1MLpssjfCvR7cVq0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/views/travel/register" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -48,6 +74,7 @@
       <workItem from="1604831338552" duration="1059000" />
       <workItem from="1604832869352" duration="9420000" />
       <workItem from="1604858146050" duration="17595000" />
+      <workItem from="1606477243496" duration="4520000" />
     </task>
     <servers />
   </component>
@@ -59,9 +86,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="544" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1604838314176" />
-    <state x="465" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1604858145511">
+    <state x="465" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1606477247777">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1604858145511" />
+    <state x="465" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1606477247777" />
   </component>
 </project>
