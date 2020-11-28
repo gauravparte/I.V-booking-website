@@ -58,43 +58,19 @@
 
 <h2>Packages</h2>
 <p>Pune</p>
-<% if (package) { %>
+<% if (data) { %>
     <div class="row">
-        <div class="column">
-            <div class="card">
-                <h1><%= package.packageName %></h1>
-                <p class="price">₹<%= package.price %></p>
-                <p><%= package.Destination %></p>
-                <p><button>Add to Cart</button></p>
+        <% data.posts.forEach(posts => { %>
+            <div class="column">
+                <div class="card">
+                    <h1><%= posts.packageName %></h1>
+                    <p class="price">₹<%= posts.price %></p>
+                    <p><%= posts.Destination %></p>
+                    <p><button>Add to Cart</button></p>
+                </div>
             </div>
-        </div>
+        <% }); %>
 
-        <div class="column">
-            <div class="card">
-                <h1><%= package.packageName %></h1>
-                <p class="price">₹<%= package.price %></p>
-                <p><%= package.Destination %></p>
-                <p><button>Add to Cart</button></p>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="card">
-                <h1><%= package.packageName %></h1>
-                <p class="price">₹<%= package.price %></p>
-                <p><%= package.Destination %></p>
-                <p><button>Add to Cart</button></p>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="card">
-                <h1><%= package.packageName %></h1>
-                <p class="price">₹<%= package.price %></p>
-                <p><%= package.Destination %></p>
-                <p><button>Add to Cart</button></p>
-            </div>
-        </div>
     </div>
 <% } %>
 </body>

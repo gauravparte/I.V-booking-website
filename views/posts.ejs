@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>EJS for shiz</title>
+    </head>
+    <body>
+        <ul>
+            <% data.posts.forEach(posts => { %>
+                <li> <%= posts.packageName %> </li>
+           <% }); %>
+        </ul>
+    </body>
+</html>

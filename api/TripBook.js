@@ -18,7 +18,7 @@ route.post('/', (req, res) => {
             user.NoOfStudents = NoOfStudents;
             user.NoOfFaculties = NoOfFaculties;
             let userModel = User(user);
-            userModel.save().then(res.json({message: "Trip booked successfully!", userModel}))
+            userModel.save().then(res.redirect('/static/packages'));
         }
     })
 });

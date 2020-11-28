@@ -12,7 +12,7 @@ route.post('/', (req,res, next) => {
         if (password != user.password) return res.json({message: "invalid password"});
         user.loggedInStatus = true;
         let userModel = User(user);
-        userModel.save().then(res.json({ message: "logged in succesfully!", user})).catch(error  => {
+        userModel.save().then(res.redirect('https://www.google.com').catch(error  => {
             res.json({error});
         });
         next();
