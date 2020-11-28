@@ -66,10 +66,15 @@
                     <nav id="fh5co-menu-wrap" role="navigation">
                         <ul class="sf-menu" id="fh5co-primary-menu">
                             <li class="active"><a href="index.html"></a></li>
-
-                            <li><a href="/static/login.html">Login</a></li>
-                            <li><a href="/static/register.html">Register</a></li>
+                            <li><a href="/static/login">Login</a></li>
+                            <li><a href="/static/register">Register</a></li>
                             <li><a href="#">Contact</a></li>
+                            <% if (emailId) { %>
+                                <li><a href="#"><%= emailId %></a></li>
+                            <% } %>
+                            <% if(!emailId) { %>
+                                <li><a href="#">No User Logged In</a></li>
+                            <% } %>
                         </ul>
                     </nav>
                 </div>

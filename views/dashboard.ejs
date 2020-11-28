@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <% if (user.emailId) { %>
+            <ul>
+                <li> <%= user.emailId %> </li>
+                <li> <%= user.firstName %> <% user.lastName%> </li>
+                <li> <%= user.Departs %> </li>
+                <li> <%= user.From %> </li>
+                <li> <%= user.To %> </li>
+                <li> <%= user.NoOfFaculties %> </li>
+                <li> <%= user.NoOfStudents %> </li>
+            </ul>
+        <% } %>
+
+    </body>
+</html>

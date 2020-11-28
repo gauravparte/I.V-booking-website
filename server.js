@@ -7,7 +7,7 @@ const port = process.env.Port || 3000;
 const User = require('./DB/User');
 const Packages = require('./DB/Packages');
 
-//defaulr parameters for the backend app
+// defaulr parameters for the backend app
 app.set('view engine', 'ejs');
 app.use(express.json({ extended: false}));
 app.use(express.static('views'));
@@ -60,7 +60,7 @@ app.post('/api/login/1', (req,res, next) => {
         if (password != user.password) return res.json({message: "invalid password"});
         user.loggedInStatus = true;
         let userModel = User(user);
-        userModel.save().then(res.redirect('/static')).catch(error  => {
+        userModel.save().then(res.redirect('/static/home')).catch(error  => {
             res.json({error})
         });
         next();
@@ -95,6 +95,7 @@ app.post('/api/trip/1', (req, res) => {
 
 // Static HTML view calls
 
+app.use('/', require('./api/dashboard'));
 app.use('/static', express.static(path.join(__dirname, 'views', 'travel')));
 app.use('/static', express.static(path.join(__dirname, 'views')));
 //
@@ -102,7 +103,7 @@ app.use('/static', express.static(path.join(__dirname, 'views')));
 //         res
 // });
 app.get('/static/home', (req, res) => {
-    res.render('travel/index');
+    res.render('travel/index', {emailId : email_});
 });
 
 app.get('/api/userModel', (req, res) => {

@@ -53,12 +53,14 @@
             background-color: #f1f1f1;
         }
     </style>
+    <title>Packages</title>
 </head>
 <body id="grad1">
 
 <h2>Packages</h2>
-<p>Pune</p>
+<form method="get" action="/static/home">
 <% if (data) { %>
+    <h3><%= data.posts[1].destination %></h3>
     <div class="row">
         <% data.posts.forEach(posts => { %>
             <div class="column">
@@ -66,12 +68,13 @@
                     <h1><%= posts.packageName %></h1>
                     <p class="price">₹<%= posts.price %></p>
                     <p><%= posts.Destination %></p>
-                    <p><button>Add to Cart</button></p>
+                    <p><button type="submit">Book Now</button></p>
                 </div>
             </div>
         <% }); %>
 
     </div>
 <% } %>
+</form>
 </body>
 </html>
