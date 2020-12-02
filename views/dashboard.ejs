@@ -1,7 +1,8 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <style>
             body {
                 color: #797979;
@@ -14,7 +15,9 @@
                 -webkit-font-smoothing: antialiased;
                 -moz-font-smoothing: antialiased;
             }
-            
+            ul {
+                list-style-type: none;
+            }
             .profile-nav, .profile-info{
                 margin-top:30px;   
             }
@@ -355,7 +358,9 @@
                 top: 13px;
                 width: 0;
             }
-            
+            .background {
+                background-color: darkgoldenrod;
+            }
             .activity-desk .arrow-alt {
                 border-left: 8px solid #F4F4F4 !important;
             }
@@ -370,7 +375,6 @@
                 top: 13px;
                 width: 0;
             }
-            
             .activity-desk .album {
                 display: inline-block;
                 margin-top: 10px;
@@ -402,33 +406,63 @@
                           <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
                       </ul>
                   </div>
+                </div>
+              <ul>
+                  <li><h2>User Details</h2></li>
+              <li><ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">Email</li>
+                <li class="list-group-item"><%= user.emailId %></li>
+              </ul></li>
+              <li><ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">First Name</li>
+                <li class="list-group-item"><%= user.firstName %></li>
+              </ul></li>
+              <li><ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">Last Name</li>
+                <li class="list-group-item"><% user.lastName%></li>
+              </ul></li>
+              <li><ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">From</li>
+                <li class="list-group-item"><%= user.From %></li>
+              </ul></li>
+              <li><ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">To</li>
+                <li class="list-group-item"><%= user.To %></li>
+              </ul></li>
+              <li><ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item">Departs</li>
+                <li class="list-group-item"><%= user.Departs %></li>
+              </ul></li>
+            </ul>
+            <div>
+            <div class="card" style="width: 18rem;">
+                <!-- <img src="" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <li><ul class="list-group list-group-horizontal-md">
+                    <li class="list-group-item">From</li>
+                    <li class="list-group-item"><%= user.From %></li>
+                  </ul></li>
+                  <li><ul class="list-group list-group-horizontal-md">
+                    <li class="list-group-item">To</li>
+                    <li class="list-group-item"><%= user.To %></li>
+                  </ul></li>
+                  <li><ul class="list-group list-group-horizontal-md">
+                    <li class="list-group-item">Departs</li>
+                    <li class="list-group-item"><%= user.Departs %></li>
+                  </ul></li> 
+                <!-- <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group list-group-horizontal-md">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul> -->
+                <div class="card-body">
+                  <a href="#" class="card-link">Book another ticket</a>
+                  <a href="#" class="card-link">Cancel ticket</a>
+                </div></div>
               </div>
-              
-                  <div class="panel">
-                      <div class="panel-body bio-graph-info">
-                          <h1>User Details</h1>
-                          <div class="row">
-                            <div class="bio-row">
-                                <p><span>Email </span><%= user.emailId %></p>
-                            </div>
-                              <div class="bio-row">
-                                  <p><span>First Name </span><%= user.firstName %></p>
-                              </div>
-                              <div class="bio-row">
-                                  <p><span>Last Name </span><% user.lastName%></p>
-                              </div>
-                              <div class="bio-row">
-                                  <p><span>From</span><%= user.From %></p>
-                              </div>
-                              <div class="bio-row">
-                                  <p><span>To </span> <%= user.To %></p>
-                              </div>
-                              <div class="bio-row">
-                                  <p><span>Departs </span> <%= user.Departs %></p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
             </div>
             </div>
