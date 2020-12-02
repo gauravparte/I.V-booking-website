@@ -387,26 +387,24 @@
             .activity-desk .album a:last-child{
                 margin-right: 0px;
             }
+            .container1{
+                display: flex;
+            }
+            .card1{
+                margin-top: 3vh;
+                margin-right: 2vw;
+            }
+            .card2{
+                margin-top: 3vh;
+                margin-right: 2vw;
+                padding: 1em 2em 0 0;
+                width: 30%;
+            }
         </style>
     </head>
     <body>
-        <div class="container bootstrap snippets bootdey">
-            <div class="row">
-              <div class="profile-nav col-md-3">
-                  <div class="panel">
-                      <div class="user-heading round">
-                          <a href="#">
-                              <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
-                          </a>
-                          <h1><%= user.firstName %></h1>
-                          <p><%= user.emailId %></p>
-                      </div>
-            
-                      <ul class="nav nav-pills nav-stacked">
-                          <li><a href="#"> <i class="fa fa-edit"></i> Edit profile</a></li>
-                      </ul>
-                  </div>
-                </div>
+        <div class="container bootstrap snippets bootdey container1">
+            <div class="card1">
               <ul>
                   <li><h2>User Details</h2></li>
               <li><ul class="list-group list-group-horizontal-md">
@@ -422,25 +420,19 @@
                 <li class="list-group-item"><% user.lastName%></li>
               </ul></li>
               <li><ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">From</li>
-                <li class="list-group-item"><%= user.From %></li>
-              </ul></li>
-              <li><ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">To</li>
-                <li class="list-group-item"><%= user.To %></li>
-              </ul></li>
-              <li><ul class="list-group list-group-horizontal-md">
                 <li class="list-group-item">Departs</li>
                 <li class="list-group-item"><%= user.Departs %></li>
               </ul></li>
             </ul>
+            </div>
             <div>
-            <div class="card" style="width: 18rem;">
+            <div class="card card2" style="width: 18rem;">
                 <!-- <img src="" class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">Packages</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
+                <ul>
                 <li><ul class="list-group list-group-horizontal-md">
                     <li class="list-group-item">From</li>
                     <li class="list-group-item"><%= user.From %></li>
@@ -449,10 +441,7 @@
                     <li class="list-group-item">To</li>
                     <li class="list-group-item"><%= user.To %></li>
                   </ul></li>
-                  <li><ul class="list-group list-group-horizontal-md">
-                    <li class="list-group-item">Departs</li>
-                    <li class="list-group-item"><%= user.Departs %></li>
-                  </ul></li> 
+                </ul>
                 <!-- <ul class="list-group list-group-flush">
                   <li class="list-group-item list-group list-group-horizontal-md">Cras justo odio</li>
                   <li class="list-group-item">Dapibus ac facilisis in</li>
