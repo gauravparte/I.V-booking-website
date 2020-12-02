@@ -21,11 +21,11 @@ const route = express.Router();
 // });
 
 route.post('/', async(req,res, next) => {
-    const{firstName, lastName, emailId, password, loggedInStatus} = req.body;
     let user = req.body;
+    user.loggedInStatus = false;
     let userModel = new User(user);
     await userModel.save().then((user) => {
-            res.json({message: "New user added!", userModel})
+            res.redirect('/static/home').json({message: "New user added!", userModel})
         }
     ).catch((e) => {
         res.json({message: "An error occurred!", e})

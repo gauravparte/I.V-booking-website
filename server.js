@@ -1,4 +1,5 @@
 // const calls for libs
+
 const express = require('express');
 const app = express();
 const connectDB = require('./DB/Connection');
@@ -6,7 +7,10 @@ const path = require('path');
 const port = process.env.Port || 3000;
 const User = require('./DB/User');
 const Packages = require('./DB/Packages');
+const cors = require('cors');
 
+
+app.use(cors());
 // defaulr parameters for the backend app
 app.set('view engine', 'ejs');
 app.use(express.json({ extended: false}));
@@ -113,14 +117,15 @@ app.get('/get',(req, res) => {
     res.send(data);
 });
 
-app.use('/static/register', (req, res) => {
+app.use('/static/signup', (req, res) => {
     res.render(path.join(__dirname, 'views', 'travel','register'))
 });
+
 app.use('/static/login', (req, res) => {
     res.render(path.join(__dirname, 'views', 'travel','login'))
 });
 
-//testing
+// Testing
 
 app.get('/posts', function(req, res) {
     let posts;
