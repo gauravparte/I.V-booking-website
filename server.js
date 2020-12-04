@@ -179,11 +179,11 @@ let userprofile = "nimit";
 app.get('/testing/userprofile', (req, res) => {
     console.log('was here');
     userprofile = "nimit1";
-   res.redirect(`/${userprofile}`);
+   res.redirect(`/testing/${userprofile}`);
 });
 console.log(userprofile);
 
-app.get(`/:username`, (req, res) => {
+app.get(`/testing/:username`, (req, res) => {
     console.log(userprofile);
     if(userprofile == "usernotfound"){
         res.send('The User Doesnot exist')
@@ -192,6 +192,14 @@ app.get(`/:username`, (req, res) => {
         res.send(`Hello ${req.params.username}!`);
 
     }
+});
+
+app.get('/login', (req, res) => {
+   res.render('pages/login');
+});
+
+app.get('/register', (req, res) => {
+   res.render('pages/register');
 });
 
 app.listen(port, () => {
