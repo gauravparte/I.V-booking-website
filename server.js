@@ -157,22 +157,41 @@ app.get('/posts', function(req, res) {
     //  posts = [1,2,3];
 });
 
-app.get("/", function(req, res) {
-    res.render('calc')
-});
-
-app.post("/", function(req, res) {
-    var num1 = Number(req.body.num1);
-    var num2 = Number(req.body.num2);
-    var result = num1 + num2 ;
-
-    res.send("Addition - " + result);
-});
 
 app.post('/send', (req, res) => {
     let {data1} =  req.body;
     data = data1;
     res.send(data);
+});
+
+app.use(express.static('public'));
+
+app.get('/testing/', (req, res) => {
+   res.render('pages/index');
+});
+
+app.use('partials/login', (req, res) => {
+    res.render('partials/login');
+});
+
+let userprofile = "nimit";
+
+app.get('/testing/userprofile', (req, res) => {
+    console.log('was here');
+    userprofile = "nimit1";
+   res.redirect(`/${userprofile}`);
+});
+console.log(userprofile);
+
+app.get(`/:username`, (req, res) => {
+    console.log(userprofile);
+    if(userprofile == "usernotfound"){
+        res.send('The User Doesnot exist')
+    }
+    else {
+        res.send(`Hello ${req.params.username}!`);
+
+    }
 });
 
 app.listen(port, () => {
