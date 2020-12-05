@@ -34,3 +34,23 @@ N
 views/travel/css/superfish.css,2\1\21fc550c9fc2251ff4c4660276e8741bbd014c28
 <
 package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
+?
+views/posts.ejs,9\7\975e271ae82c4a4ef609d4037f7ff58a87ba05fc
+F
+public/css/product.css,9\6\9658fad9511c5121feaae40535fcc9a804c173ba
+H
+views/partials/login.ejs,7\e\7ec69e7f6456670561a8428dd975d01ce9912cf9
+I
+views/partials/footer.ejs,1\2\12e5eb8376bd53293e479165861eabbff9b3d746
+G
+views/partials/head.ejs,f\a\fa052df8de427053ec16f2fadcc6c211287ab638
+@
+DB/Connection.js,f\3\f3627db4c9909cc22e7b2186c62dbe947f40b244
+H
+views/pages/register.ejs,7\7\77cbdd9a699754f1d2363607b217d28fda421c96
+E
+views/pages/login.ejs,3\4\34d20ebc7158dff9460206c7993f495e95611ba9
+E
+views/pages/index.ejs,5\2\5221f6cc81166ab8ae7bbb9aa44563e95b3024aa
+I
+views/partials/header.ejs,a\6\a6563f0102bbd243ffc487f3f3013a1652bf3ac5

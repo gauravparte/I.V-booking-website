@@ -25,7 +25,7 @@ route.post('/', async(req,res, next) => {
     user.loggedInStatus = false;
     let userModel = new User(user);
     await userModel.save().then((user) => {
-            res.redirect('/static/home').json({message: "New user added!", userModel})
+            res.redirect('/login').json({message: "New user added!", userModel})
         }
     ).catch((e) => {
         res.json({message: "An error occurred!", e})

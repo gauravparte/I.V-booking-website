@@ -88,19 +88,19 @@
     <link href="signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
-<form class="form-signin">
+<form class="form-signin" method="post" action="/api/register/1">
     <img class="mb-4" src="https://cdn.discordapp.com/attachments/734011457003323394/784440463616639016/clipart-airplane-logo-11.png" alt="" width="200" height="200">
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputfirstname" class="sr-only">First Name</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="First Name" required autofocus>
+    <input type="text" id="inputEmail" class="form-control" name="firstName" placeholder="First Name" required autofocus>
     <label for="inputlastename" class="sr-only">Last Name</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Last Name" required autofocus>
+    <input type="text" id="inputEmail" class="form-control" name="lastName" placeholder="Last Name" required autofocus>
     <label for="inputusername" class="sr-only">Username</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+    <input type="text" id="inputEmail" class="form-control" name="username" placeholder="Username" required autofocus>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="email" id="inputEmail" class="form-control" name="emailId" placeholder="Email address" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
     <div class="checkbox mb-3">
 
     </div>

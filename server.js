@@ -21,10 +21,11 @@ app.use(express.urlencoded({extended: false}));
 connectDB();
 
 let email_ = "";
+let username_ = "";
 let To_ = "";
 
 //api calls
-app.get('/static/packages', (req, res) => {
+app.get('/packages', (req, res) => {
     let posts;
     console.log(email_);
     const emailId = email_;
@@ -57,19 +58,19 @@ app.use('/api/admin-panel', require('./api/admin-panel'));
 //app.use('/api/trip/1', require('./api/TripBook'));
 
 app.post('/api/login/1', (req,res, next) => {
-    const{emailId, password} = req.body;
+    const{username, password} = req.body;
     //res.json(req.body);
-    User.findOne({ emailId }).then((user) => {
+    User.findOne({ username }).then((user) => {
         if (!user) return res.json({message: "The user does not exists!"});
         if (password != user.password) return res.json({message: "invalid password"});
         user.loggedInStatus = true;
         let userModel = User(user);
-        userModel.save().then(res.redirect('/static/home')).catch(error  => {
+        userModel.save().then(res.redirect('/testing')).catch(error  => {
             res.json({error})
         });
         next();
-        email_ = emailId;
-        console.log(email_);
+        username_ = username;
+        console.log(username_);
         console.log(`${user.firstName} logged in.`);
     })
 });
@@ -91,7 +92,7 @@ app.post('/api/trip/1', (req, res) => {
             user.NoOfFaculties = NoOfFaculties;
             To_ = user.To;
             let userModel = User(user);
-            userModel.save().then(res.redirect('/static/packages'))
+            userModel.save().then(res.redirect('/packages'))
         }
     })
 });
@@ -167,7 +168,18 @@ app.post('/send', (req, res) => {
 app.use(express.static('public'));
 
 app.get('/testing/', (req, res) => {
-   res.render('pages/index');
+    let user = {};
+    console.log(email_);
+    user.username  = "nimirocker";
+    let username = user.username;
+    User.findOne({ username }).then((user) => {
+        if (!user) return console.log(res.json({message: "The user does not exists!"}));
+        else {
+            res.render('pages/index', {username_});
+            console.log(user);
+        }
+    });
+    user.username = "username";
 });
 
 app.use('partials/login', (req, res) => {
@@ -194,12 +206,36 @@ app.get(`/testing/:username`, (req, res) => {
     }
 });
 
+
+
 app.get('/login', (req, res) => {
-   res.render('pages/login');
+    let user = {};
+    user.username = "username";
+   res.render('pages/login', {user});
 });
 
 app.get('/register', (req, res) => {
    res.render('pages/register');
+});
+
+
+app.get('/user', (req, res) => {
+    // const emailId = email_;
+    // console.log(emailId);
+    // User.findOne({ email_ }).then((user) => {
+    //     if (!user) res.send('user not found');
+    //     if (user) res.send('fuck yeah')
+    // });
+    console.log(email_);
+    let username = username_;
+    const emailId = email_;
+    User.findOne({ username }).then((user) => {
+        if (!user) return console.log(res.json({message: "The user does not exists!"}));
+        else {
+            res.render('dashboard', {username_, user});
+            console.log(username_);
+        }
+    });
 });
 
 app.listen(port, () => {
